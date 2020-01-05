@@ -1,0 +1,206 @@
+[src/utils/util.h:94]: (information) Skipping configuration 'HAVE_CONFIG_H=1;__cplusplus=201103L;CATCH_ARC_ENABLED=0;SYS_gettid;__linux__' since the value of 'SYS_gettid' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+[src/sfip/sf_cidr.h:33]: (style) The struct 'SfCidr' does not have a constructor although it has private member variables.
+[src/codecs/ip/cd_ipv4.cc:545]: (style) struct member 'ip4_addr::addr8' is never used.
+[src/connectors/file_connector/file_connector_module.cc:63]: (style) Class 'FileConnectorModule' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/connectors/file_connector/file_connector_module.cc:63]: (style) Class 'FileConnectorModule' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/connectors/tcp_connector/tcp_connector.cc:215]: (style) Class 'TcpConnector' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/connectors/tcp_connector/tcp_connector.cc:215]: (style) Class 'TcpConnector' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/connectors/tcp_connector/tcp_connector_module.cc:63]: (style) Class 'TcpConnectorModule' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/connectors/tcp_connector/tcp_connector_module.cc:63]: (style) Class 'TcpConnectorModule' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/helpers/ring.h:58]: (style) Class 'Ring' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/detection/fp_detect.cc:868]: (warning) Assert statement calls a function which may have desired side effects: 'get_pattern_count'.
+[src/detection/fp_detect.cc:726]: (style) The class 'MpseStash' does not have a constructor although it has private member variables.
+[src/flow/flow.h:305]: (style) Class 'Flow' is unsafe, 'Flow::key' can leak by wrong usage.
+[src/flow/flow.h:308]: (style) Class 'Flow' is unsafe, 'Flow::ha_state' can leak by wrong usage.
+[src/framework/codec.cc:211]: (warning) Comparison of a boolean expression with an integer other than 0 or 1.
+[src/helpers/base64_encoder.cc:51]: (error) Pointer addition with NULL pointer.
+[src/ips_options/asn1_util.cc:518] -> [src/ips_options/asn1_util.cc:518]: (style) Same expression on both sides of '<='.
+[src/ips_options/ips_replace.cc:112]: (style) Class 'ReplaceOption' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/ips_options/ips_replace.cc:112]: (style) Class 'ReplaceOption' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/ips_options/test/ips_regex_test.cc:182]: (style) Variable 'end' is assigned a value that is never used.
+[src/ips_options/test/ips_regex_test.cc:183]: (style) Variable 'expect' is assigned a value that is never used.
+[src/ips_options/test/ips_regex_test.cc:278]: (style) Variable 'opt' is assigned a value that is never used.
+[src/ips_options/test/ips_regex_test.cc:349]: (style) Variable 'opt' is assigned a value that is never used.
+[src/log/log_text.cc:1092] -> [src/log/log_text.cc:1089]: (warning) Either the condition '!data' is redundant or there is pointer arithmetic with NULL pointer.
+[src/log/log_text.cc:415]: (style) The scope of the variable 'save_sp' can be reduced.
+[src/log/log_text.cc:415]: (style) The scope of the variable 'save_dp' can be reduced.
+[src/loggers/alert_csv.cc:135]: (portability) Assigning a pointer to an integer is not portable.
+[src/loggers/alert_csv.cc:329]: (portability) Assigning a pointer to an integer is not portable.
+[src/loggers/alert_csv.cc:349]: (portability) Assigning a pointer to an integer is not portable.
+[src/loggers/alert_fast.cc:243]: (style) The scope of the variable 'log_pkt' can be reduced.
+[src/loggers/alert_json.cc:161]: (portability) Assigning a pointer to an integer is not portable.
+[src/loggers/alert_json.cc:439]: (portability) Assigning a pointer to an integer is not portable.
+[src/loggers/alert_json.cc:466]: (portability) Assigning a pointer to an integer is not portable.
+[src/loggers/alert_syslog.cc:112]: (information) Skipping configuration 'HAVE_CONFIG_H=1;__cplusplus=201103L;CATCH_ARC_ENABLED=0;LOG_PERROR' since the value of 'LOG_PERROR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+[src/loggers/log_pcap.cc:259]: (style) Class 'PcapLogger' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/loggers/log_pcap.cc:259]: (style) Class 'PcapLogger' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/main/snort_config.cc:868]: (information) Skipping configuration 'HAVE_CONFIG_H=1;__cplusplus=201103L;CATCH_ARC_ENABLED=0;ACCESSPERMS' since the value of 'ACCESSPERMS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+[src/main/snort_config.cc:868]: (information) Skipping configuration 'HAVE_CONFIG_H=1;__cplusplus=201103L;CATCH_ARC_ENABLED=0;S_IAMB' since the value of 'S_IAMB' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+[src/main/snort_debug.cc:177]: (style) Variable 'testing_trace' is assigned a value that is never used.
+[src/main/snort_debug.cc:194]: (style) Variable 'testing_trace' is assigned a value that is never used.
+[src/main/snort_debug.cc:211]: (style) Variable 'testing_trace' is assigned a value that is never used.
+[src/main/snort_debug.cc:226]: (style) Variable 'testing_trace' is assigned a value that is never used.
+[src/main/snort_debug.cc:241]: (style) Variable 'testing_trace' is assigned a value that is never used.
+[src/main/snort_debug.cc:246]: (style) Variable 'message' is assigned a value that is never used.
+[src/mime/decode_b64.cc:92]: (style) Class 'B64Decode' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/mime/decode_b64.cc:92]: (style) Class 'B64Decode' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/mime/decode_qp.cc:91]: (style) Class 'QPDecode' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/mime/decode_qp.cc:91]: (style) Class 'QPDecode' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/mime/decode_uu.cc:116]: (style) Class 'UUDecode' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/mime/decode_uu.cc:116]: (style) Class 'UUDecode' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/network_inspectors/appid/appid_api.cc:167] -> [src/network_inspectors/appid/appid_api.cc:170]: (warning) Identical inner 'if' condition is always true.
+[src/network_inspectors/appid/appid_config.cc:666] -> [src/network_inspectors/appid/appid_config.cc:669]: (performance) Buffer 'addrString' is being written before its old content has been used.
+[src/network_inspectors/appid/appid_config.cc:720] -> [src/network_inspectors/appid/appid_config.cc:722]: (performance) Buffer 'addrString' is being written before its old content has been used.
+[src/network_inspectors/appid/appid_discovery.cc:350]: (style) Condition 'is_http2' is always false
+[src/network_inspectors/appid/detector_plugins/detector_imap.cc:519]: (warning) Possible leak in public function. The pointer 'cmd_matcher' is not deallocated before it is allocated.
+[src/network_inspectors/appid/service_plugins/service_ssl.cc:139]: (style) struct member 'Anonymous0::time' is never used.
+[src/network_inspectors/appid/service_plugins/service_ssl.cc:242]: (error) Memory leak: matcher
+[src/network_inspectors/appid/test/appid_api_test.cc:121] -> [src/network_inspectors/appid/test/appid_api_test.cc:139]: (style) Variable 'val' is reassigned a value before the old one has been used.
+[src/network_inspectors/appid/test/appid_api_test.cc:139]: (style) Variable 'val' is assigned a value that is never used.
+[src/network_inspectors/appid/test/appid_session_api_test.cc:229]: (style) Variable 'val' is assigned a value that is never used.
+[src/network_inspectors/packet_tracer/packet_tracer.cc:75]: (performance) Function parameter 'file' should be passed by const reference.
+[src/network_inspectors/packet_tracer/packet_tracer.cc:598]: (warning) Comparison of a boolean expression with an integer other than 0 or 1.
+[src/network_inspectors/packet_tracer/packet_tracer.cc:673]: (warning) Comparison of a boolean expression with an integer other than 0 or 1.
+[src/network_inspectors/packet_tracer/packet_tracer.cc:678]: (warning) Comparison of a boolean expression with an integer other than 0 or 1.
+[src/network_inspectors/packet_tracer/packet_tracer.cc:679]: (warning) Comparison of a boolean expression with an integer other than 0 or 1.
+[src/network_inspectors/packet_tracer/packet_tracer.cc:680]: (warning) Comparison of a boolean expression with an integer other than 0 or 1.
+[src/network_inspectors/perf_monitor/cpu_tracker.cc:74]: (information) Skipping configuration 'HAVE_CONFIG_H=1;__cplusplus=201103L;CATCH_ARC_ENABLED=0;RUSAGE_LWP' since the value of 'RUSAGE_LWP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+[src/network_inspectors/perf_monitor/cpu_tracker.cc:76]: (information) Skipping configuration 'HAVE_CONFIG_H=1;__cplusplus=201103L;CATCH_ARC_ENABLED=0;RUSAGE_THREAD' since the value of 'RUSAGE_THREAD' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+[src/network_inspectors/perf_monitor/csv_formatter.cc:142]: (style) Variable 'five' is assigned a value that is never used.
+[src/network_inspectors/perf_monitor/json_formatter.cc:174]: (style) Variable 'five' is assigned a value that is never used.
+[src/network_inspectors/perf_monitor/perf_module.cc:225]: (performance) Function parameter 'name' should be passed by const reference.
+[src/network_inspectors/perf_monitor/text_formatter.cc:140]: (style) Variable 'five' is assigned a value that is never used.
+[src/network_inspectors/port_scan/ps_detect.cc:560]: (style) The scope of the variable 'session_flags' can be reduced.
+[src/lua/lua_arg.h:189]: (style) Unused private function: 'ArgRef::is'
+[src/piglet_plugins/pp_ips_option.cc:54]: (style) Class 'IpsOptionPiglet' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/piglet_plugins/pp_ips_option.cc:54]: (style) Class 'IpsOptionPiglet' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/service_inspectors/gtp/gtp.cc:75]: (error) Address of auto-variable 'gfd->ropts' returned
+[src/service_inspectors/http2_inspect/http2_stream_splitter_impl.cc:73]: (error) Array 'session_data.frame_header[2]' accessed at index 2, which is out of bounds.
+[src/service_inspectors/http2_inspect/http2_stream_splitter_impl.cc:74]: (error) Array 'session_data.frame_header[2]' accessed at index 3, which is out of bounds.
+[src/service_inspectors/http2_inspect/test/http2_inspect_impl_test.cc:43]: (style) Unused variable: b
+[src/service_inspectors/http2_inspect/test/http2_stream_splitter_impl_test.cc:43]: (style) Variable 'flush_offset' is assigned a value that is never used.
+[src/service_inspectors/http2_inspect/test/http2_stream_splitter_impl_test.cc:188]: (style) Variable 'copied' is assigned a value that is never used.
+[src/service_inspectors/http_inspect/http_header_normalizer.cc:113]: (error) Memory is allocated but not initialized: norm_value
+[src/service_inspectors/http_inspect/http_header_normalizer.cc:113]: (error) Memory is allocated but not initialized: temp_space
+[src/service_inspectors/http_inspect/http_test_input.cc:48]: (style) Class 'HttpTestInput' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/service_inspectors/http_inspect/http_test_input.cc:48]: (style) Class 'HttpTestInput' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/service_inspectors/http_inspect/http_test_input.cc:48]: (style) Class 'HttpTestInput' does not have a destructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/service_inspectors/http_inspect/http_test_input.h:41]: (style) Class 'HttpTestInput' is unsafe, 'HttpTestInput::test_data_file' can leak by wrong usage.
+[src/service_inspectors/http_inspect/ips_http.cc:190]: (style) Variable 'b' is assigned a value that is never used.
+[src/service_inspectors/http_inspect/ips_http.cc:191]: (style) Variable 'e' is assigned a value that is never used.
+[src/service_inspectors/http_inspect/test/http_msg_head_shared_util_test.cc:45]: (style) Variable 'offset' is assigned a value that is never used.
+[src/service_inspectors/http_inspect/test/http_msg_head_shared_util_test.cc:46]: (style) Variable 'color_table' is assigned a value that is never used.
+[src/service_inspectors/http_inspect/test/http_transaction_test.cc:62]: (style) Variable 'section_type' is assigned a value that is never used.
+[src/service_inspectors/http_inspect/test/http_transaction_test.cc:63]: (style) Variable 'type_expected' is assigned a value that is never used.
+[src/service_inspectors/http_inspect/test/http_uri_norm_test.cc:57]: (style) Unused variable: buffer
+[src/service_inspectors/http_inspect/test/http_uri_norm_test.cc:74]: (style) Unused variable: buffer
+[src/service_inspectors/imap/imap.cc:184]: (error) Address of auto-variable 'fd->session' returned
+[src/service_inspectors/pop/pop.cc:143]: (error) Address of auto-variable 'fd->session' returned
+[src/service_inspectors/rpc_decode/rpc_decode.cc:558]: (error) Address of auto-variable 'fd->session' returned
+[src/service_inspectors/smtp/smtp.cc:223]: (error) Address of auto-variable 'fd->session' returned
+[src/sfrt/sfrt.cc:364] -> [src/sfrt/sfrt.cc:368]: (warning) Identical condition 'table->ip_type==IPv6', second condition is always false
+[src/stream/ip/ip_defrag.cc:405]: (style) Clarify calculation precedence for '&' and '?'.
+[src/stream/user/user_session.h:28]: (style) The struct 'UserSegment' does not have a constructor although it has private member variables.
+[src/target_based/snort_protocols.cc:122]: (performance) Prefer prefix ++/-- operators for non-primitive types.
+[src/utils/util_jsnorm.cc:832] -> [src/utils/util_jsnorm.cc:832]: (style) Opposite expression on both sides of '&'.
+[src/utils/util_jsnorm.cc:1096] -> [src/utils/util_jsnorm.cc:1096]: (style) Opposite expression on both sides of '&'.
+[tools/flatbuffers/fbstreamer.cc:175]: (error) Memory pointed to by 'schema' is freed twice.
+[tools/snort2lua/keyword_states/kws_file.cc:128]: (style) Expression is always false because 'else if' condition matches previous condition at line 121.
+[tools/snort2lua/output_states/out_csv.cc:49] -> [tools/snort2lua/output_states/out_csv.cc:54]: (warning) Identical condition '!(data_stream>>keyword)', second condition is always false
+[tools/snort2lua/output_states/out_fast.cc:46] -> [tools/snort2lua/output_states/out_fast.cc:51]: (warning) Identical condition '!(data_stream>>keyword)', second condition is always false
+[tools/snort2lua/output_states/out_fast.cc:51] -> [tools/snort2lua/output_states/out_fast.cc:58]: (warning) Identical condition '!(data_stream>>keyword)', second condition is always false
+[tools/snort2lua/preprocessor_states/pps_ftp_telnet_protocol.cc:802] -> [tools/snort2lua/preprocessor_states/pps_ftp_telnet_protocol.cc:810]: (warning) Identical inner 'if' condition is always true.
+[src/service_inspectors/dce_rpc/dce_utils.cc:169]: (style) The function 'DCE2_UuidToStr' is never used.
+[src/search_engines/bnfa_search.cc:625]: (style) The function 'KcontainsJx' is never used.
+[src/log/messages.cc:76]: (style) The function 'ParseMessage' is never used.
+[src/ports/port_table.cc:963]: (style) The function 'PortTablePrintInput' is never used.
+[src/ports/port_table.cc:998]: (style) The function 'PortTablePrintPortGroups' is never used.
+[src/ports/port_table.cc:980]: (style) The function 'PortTablePrintUserRules' is never used.
+[src/parser/parser.cc:675]: (style) The function 'PrintRuleOrder' is never used.
+[src/filters/rate_filter.cc:152]: (style) The function 'RateFilter_PrintConfig' is never used.
+[src/target_based/sftarget_reader.cc:243]: (style) The function 'SFAT_LookupHostEntryByDst' is never used.
+[src/target_based/sftarget_reader.cc:235]: (style) The function 'SFAT_LookupHostEntryBySrc' is never used.
+[src/filters/sfrf.cc:171]: (style) The function 'SFRF_Flush' is never used.
+[src/filters/sfrf.cc:574]: (style) The function 'SFRF_ShowObjects' is never used.
+[src/log/text_log.cc:99]: (style) The function 'TextLog_Tell' is never used.
+[src/search_engines/bnfa_search.cc:395]: (style) The function '_bnfa_list_print_table' is never used.
+[src/search_engines/acsmx2.cc:1628]: (style) The function 'acsmx2_print_qinfo' is never used.
+[src/protocols/ip.cc:235]: (style) The function 'actual_ip_len' is never used.
+[src/network_inspectors/appid/appid_utils/network_set.cc:218]: (style) The function 'add_cidr_block' is never used.
+[src/network_inspectors/appid/appid_utils/network_set.cc:265]: (style) The function 'add_cidr_block6' is never used.
+[src/network_inspectors/appid/appid_utils/network_set.cc:122]: (style) The function 'add_network_range' is never used.
+[src/network_inspectors/appid/appid_utils/network_set.cc:187]: (style) The function 'add_network_range_only_ipv6' is never used.
+[src/search_engines/bnfa_search.cc:1209]: (style) The function 'bnfaSetCase' is never used.
+[src/packet_io/sfdaq.cc:447]: (style) The function 'can_whitelist' is never used.
+[src/file_api/circular_buffer.cc:110]: (style) The function 'cbuffer_size' is never used.
+[src/network_inspectors/appid/test/tp_mock.cc:103]: (style) The function 'create_third_party_appid_module' is never used.
+[src/network_inspectors/appid/test/tp_mock.cc:108]: (style) The function 'create_third_party_appid_session' is never used.
+[src/packet_io/active.cc:422]: (style) The function 'daq_retry_packet' is never used.
+[src/filters/detection_filter.cc:56]: (style) The function 'detection_filter_print_config' is never used.
+[src/managers/inspector_manager.cc:497]: (style) The function 'dispatch_meta' is never used.
+[src/network_inspectors/appid/appid_config.cc:940]: (style) The function 'display_port_config' is never used.
+[src/lua/lua_util.cc:30]: (style) The function 'fmt_expected_message' is never used.
+[src/lua/lua_util.cc:37]: (style) The function 'fmt_range_message' is never used.
+[src/network_inspectors/appid/appid_utils/fw_avltree.cc:73]: (style) The function 'fwAvlLast' is never used.
+[src/network_inspectors/appid/appid_utils/fw_avltree.cc:99]: (style) The function 'fwAvlPrev' is never used.
+[src/network_inspectors/appid/test/tp_mock.cc:89]: (style) The function 'get_attr' is never used.
+[src/managers/plugin_manager.cc:548]: (style) The function 'get_available_plugins' is never used.
+[src/managers/module_manager.cc:921]: (style) The function 'get_current_module' is never used.
+[src/log/u2_packet.cc:70]: (style) The function 'get_dsize' is never used.
+[src/protocols/layer.cc:127]: (style) The function 'get_eapol_layer' is never used.
+[src/loggers/alert_luajit.cc:49]: (style) The function 'get_event' is never used.
+[src/flow/expect_cache.cc:77]: (style) The function 'get_expect_flows' is never used.
+[src/profiler/memory_context.cc:53]: (style) The function 'get_fallthrough_stats' is never used.
+[src/stream/stream.cc:114]: (style) The function 'get_flow_key' is never used.
+[src/packet_io/active.cc:612]: (style) The function 'get_injects' is never used.
+[src/protocols/layer.cc:102]: (style) The function 'get_inner_layer' is never used.
+[src/profiler/profiler_nodes.cc:188]: (style) The function 'get_multi' is never used.
+[src/protocols/layer.cc:105]: (style) The function 'get_outer_layer' is never used.
+[src/managers/event_manager.cc:124]: (style) The function 'get_output_type_flags' is never used.
+[src/protocols/packet_manager.cc:842]: (style) The function 'get_rebuilt_packet_count' is never used.
+[src/main/policy.cc:271]: (style) The function 'get_user_ips_policy' is never used.
+[src/main/policy.cc:276]: (style) The function 'get_user_network_policy' is never used.
+[src/network_inspectors/appid/appid_peg_counts.cc:103]: (style) The function 'inc_misc_count' is never used.
+[src/piglet_plugins/pp_raw_buffer_iface.cc:48]: (style) The function 'init_from_size' is never used.
+[src/piglet_plugins/pp_raw_buffer_iface.cc:34]: (style) The function 'init_from_string' is never used.
+[src/protocols/ip.cc:309]: (style) The function 'is_dst_loopback' is never used.
+[src/protocols/ip.cc:297]: (style) The function 'is_src_loopback' is never used.
+[src/main/snort.cc:490]: (style) The function 'is_starting' is never used.
+[src/network_inspectors/appid/appid_utils/network_set.cc:271]: (style) The function 'log_network_set' is never used.
+[src/main.cc:517]: (style) The function 'main_process' is never used.
+[src/network_inspectors/appid/appid_utils/sf_multi_mpse.cc:77]: (style) The function 'mlpAddPattern' is never used.
+[src/network_inspectors/appid/appid_utils/sf_multi_mpse.cc:69]: (style) The function 'mlpCreate' is never used.
+[src/network_inspectors/appid/appid_utils/sf_multi_mpse.cc:149]: (style) The function 'mlpDestroy' is never used.
+[src/network_inspectors/appid/appid_utils/sf_multi_mpse.cc:154]: (style) The function 'mlpDump' is never used.
+[src/network_inspectors/appid/appid_utils/sf_multi_mpse.cc:405]: (style) The function 'mlpGetPatternMatcherTree' is never used.
+[src/network_inspectors/appid/appid_utils/sf_multi_mpse.cc:92]: (style) The function 'mlpMatchPatternLongest' is never used.
+[src/network_inspectors/appid/appid_utils/sf_multi_mpse.cc:97]: (style) The function 'mlpMatchPatternUrl' is never used.
+[src/network_inspectors/appid/appid_utils/sf_multi_mpse.cc:82]: (style) The function 'mlpProcessPatterns' is never used.
+[src/packet_io/sfdaq.cc:624]: (style) The function 'modify_flow_opaque' is never used.
+[src/detection/detection_engine.cc:238]: (style) The function 'offloaded' is never used.
+[src/packet_io/active.cc:597]: (style) The function 'packet_would_be_dropped' is never used.
+[src/stream/stream.cc:193]: (style) The function 'proxy_started' is never used.
+[src/network_inspectors/appid/test/tp_mock.cc:64]: (style) The function 'reconfigure' is never used.
+[src/network_inspectors/appid/appid_session_api.cc:36]: (style) The function 'refresh' is never used.
+[src/stream/libtcp/tcp_stream_tracker.cc:243]: (style) The function 'reset_splitter' is never used.
+[src/stream/stream.cc:249]: (style) The function 'resume_inspection' is never used.
+[tools/snort2lua/helpers/s2l_util.cc:261]: (style) The function 'rule_option_find_val' is never used.
+[src/utils/segment_mem.cc:34]: (style) The function 'segment_unusedmem' is never used.
+[src/piglet_plugins/pp_ip_api_iface.cc:50]: (style) The function 'set < ip :: IP4Hdr >' is never used.
+[src/piglet_plugins/pp_ip_api_iface.cc:50]: (style) The function 'set < ip :: IP6Hdr >' is never used.
+[src/managers/module_manager.cc:660]: (style) The function 'set_alias' is never used.
+[src/network_inspectors/appid/appid_config.cc:748]: (style) The function 'set_safe_search_enforcement' is never used.
+[src/sfrt/sfrt_flat.cc:169]: (style) The function 'sfrt_flat_free' is never used.
+[src/sfrt/sfrt.cc:468]: (style) The function 'sfrt_print' is never used.
+[src/sfrt/sfrt.cc:337]: (style) The function 'sfrt_search' is never used.
+[src/filters/sfthd.cc:1237]: (style) The function 'sfthd_show_objects' is never used.
+[src/framework/module.cc:134]: (style) The function 'show_interval_stats' is never used.
+[src/network_inspectors/appid/appid_inspector.cc:304]: (style) The function 'sslAppGroupIdLookup' is never used.
+[src/stream/tcp/tcp_session.cc:438]: (style) The function 'swap_trackers' is never used.
+[src/main/thread.cc:60]: (style) The function 'take_break' is never used.
+[src/main/snort_debug.cc:115]: (style) The function 'test_fputs' is never used.
+[src/framework/data_bus.cc:88]: (style) The function 'unsubscribe' is never used.
+[src/hash/xhash.cc:835]: (style) The function 'xhash_gfindfirst' is never used.
+[src/hash/xhash.cc:820]: (style) The function 'xhash_gfindnext' is never used.
+[src/network_inspectors/appid/service_plugins/service_ssl.cc:140]: (information) Unmatched suppression: unusedStructMember
+(information) Cppcheck cannot find all the include files (use --check-config for details)
