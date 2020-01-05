@@ -38,10 +38,10 @@ struct PortObject
     char* name;                 /* user name */
     int id;                     /* internal tracking - compiling sets this value 内部跟踪用的编译的时候会设置这个值*/
 
-    SF_LIST* item_list;         /* list of port and port-range items */
-    SF_LIST* rule_list;         /* list of rules  */
+    SF_LIST* item_list;         /* list of port and port-range items 端口和端口范围项列表*/
+    SF_LIST* rule_list;         /* list of rules  规则链表*/
 
-    PortGroup* group;           // based on rule_list - only used by any-any ports
+    PortGroup* group;           // based on rule_list - only used by any-any ports 基于规则链表，仅仅用于any-any 端口
 };
 
 PortObject* PortObjectNew();

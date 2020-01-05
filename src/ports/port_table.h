@@ -32,36 +32,40 @@
 // PortTable - provides support to analyze the Port List objects defined by
 // the user as either PortVar entries or simply as inline rule port list
 // declarations.
+// PortTable 提供支持分析用户定义的或者是内部规则携带的端口列表
 //-------------------------------------------------------------------------
 
 struct PortTable
 {
     /* turns on group optimization, better speed-but more memory
      * otherwise a single merged rule group is used.
+     开启组优化，更好的性能但是需要更多的内存空间，尤其是一个单独合并的规则组被使用时
      */
     int pt_optimize;
 
     /* save the users input port objects in this list
      * rules may be added after creation of a port object
      * but the ports are not modified.
+     将用户输入的端口对象保存到该链表中，端口对象创建后规则可能会被添加进来
      */
     SF_LIST* pt_polist;
     int pt_poid;
 
-    /* Compiled / merged port object hash table */
+    /* Compiled / merged port object hash table  编译合并端口对象到 hash表中*/
     snort::GHash* pt_mpo_hash;
     snort::GHash* pt_mpxo_hash;
 
     /*
     * Final Port/Rule Groupings, one port object per port, or null
+    最终的 端口/规则 组，一个端口对象一个端口
     */
     PortObject2* pt_port_object[SFPO_MAX_PORTS];
 
     int pt_lrc; /* large rule count, this many rules is a large group */
 
     /* Stats */
-    int single_merges; /* single PortObject on a port */
-    int small_merges;  /* small port objects merged into a bigger object */
+    int single_merges; /* single PortObject on a port 一个端口关联一个单独的ProtObject*/
+    int small_merges;  /* small port objects merged into a bigger object 小的端口对象合并到较大的端口对象中*/
     int large_single_merges; /* 1 large + some small objects */
     int large_multi_merges; /* >1 large object merged + some small objects */
     int non_opt_merges;

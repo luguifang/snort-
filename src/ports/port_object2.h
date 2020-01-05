@@ -41,12 +41,12 @@ struct PortObject2
     int id;                     /* internal tracking - compiling sets this value */
 
     SF_LIST* item_list;         /* list of port and port-range items */
-    snort::GHash* rule_hash;         /* hash of rule (rule-indexes) in use */
+    snort::GHash* rule_hash;         /* hash of rule (rule-indexes) in use 使用的规则hash表*/
 
-    PortBitSet* port_list;      /* for collecting ports that use this object */
-    struct PortGroup* group;    /* PortGroup based on rule_hash  */
+    PortBitSet* port_list;      /* for collecting ports that use this object 收集使用该对象的端口*/
+    struct PortGroup* group;    /* PortGroup based on rule_hash  基于rule_hash 的PortGroup*/
 
-    int port_cnt;               /* count of ports using this object */
+    int port_cnt;               /* count of ports using this object 使用该对象的端口数量*/
 };
 
 PortObject2* PortObject2New(int nrules /*guess at this */);
