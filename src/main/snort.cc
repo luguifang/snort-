@@ -273,6 +273,7 @@ void Snort::init(int argc, char** argv)
     FileService::init();
     register_profiles();
 
+	/*解析配置文件之前的一些初始化工作 lgf*/
     parser_init();
     SnortConfig* sc = ParseSnortConf(snort_cmd_line_conf);
 
@@ -297,7 +298,7 @@ void Snort::init(int argc, char** argv)
     {
         OrderRuleLists(SnortConfig::get_conf(), "drop sdrop reject alert pass log");
     }
-
+	/*这里将会进入解析snort规则的顶层函数入口*/
     SnortConfig::get_conf()->setup();
 
     FileService::post_init();

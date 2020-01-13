@@ -472,8 +472,8 @@ static const State* get_state(int num, TokenType type, const string& tok)
 
 struct RuleParseState
 {
-    RuleTreeNode rtn;
-    OptTreeNode* otn;
+    RuleTreeNode rtn; // 规则头部分
+    OptTreeNode* otn; // 规则选项部分
 
     string key;
     string opt;
@@ -487,6 +487,7 @@ struct RuleParseState
 
 static void parse_body(const char*, RuleParseState&, struct snort::SnortConfig*);
 
+//解析snort 的配置文件中的关键字入口
 static bool exec(
     FsmAction act, string& tok,
     RuleParseState& rps, snort::SnortConfig* sc)

@@ -443,7 +443,7 @@ SnortConfig* ParseSnortConf(const SnortConfig* boot_conf, const char* fname)
     DefineAllIfaceVars(sc);
 
     /* Add command line defined variables - duplicates will already
-     * have been resolved */
+     * have been resolved 添加命令行定义的变量*/
     while (tmp != nullptr)
     {
         AddVarToTable(sc, tmp->name, tmp->value);
@@ -541,7 +541,7 @@ void SetRuleStates(SnortConfig* sc)
         otn->enabled = rule_state->state;
     }
 }
-
+/*snort 规则解析 lgf*/
 void ParseRules(SnortConfig* sc)
 {
     for ( unsigned idx = 0; idx < sc->policy_map->ips_policy_count(); ++idx )
@@ -549,6 +549,7 @@ void ParseRules(SnortConfig* sc)
         set_ips_policy(sc, idx);
         IpsPolicy* p = sc->policy_map->get_ips_policy(idx);
 
+		/*加载内建规则 lgf*/
         if ( p->enable_builtin_rules )
             ModuleManager::load_rules(sc);
 

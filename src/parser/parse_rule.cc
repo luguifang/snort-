@@ -476,6 +476,9 @@ static int ProcessIP(SnortConfig*, const char* addr, RuleTreeNode* rtn, int mode
 *
 *  These should not be confused with the port objects used to merge ports and rules
 *  to build port group objects. Those are generated after the otn processing.
+*  将字符串表示的端口解析成一个端口变量，同时为它创建或者寻找一个PortObject，并且把它加入到端口变量表中
+*  rtn将它们用作src和dst端口列表，以进行最终的rtn / otn处理
+* 	这些不应与用于合并端口的端口对象和用于构建端口组对象的规则相混淆。这些是在otn处理之后生成的
 */
 static PortObject* ParsePortListTcpUdpPort(
     PortVarTable* pvt, PortTable* noname, const char* port_str)
@@ -558,7 +561,8 @@ static PortObject* ParsePortListTcpUdpPort(
  *   rtn - proto_node
  *   port_str - port list string or port var name
  *   dst_flag - dst or src port flag, true = dst, false = src
- *
+ *	处理规则，将它加入到合适的规则对象中，并且添加PortObject到rtn中
+ *  tcp/udp 的规则使用端口/端口列表，icmp 使用icmp类型,ip使用协议字段作为目的端口目的是数据包被处理时为了寻找规则组
  */
 static int ParsePortList(
     RuleTreeNode* rtn, PortVarTable* pvt, PortTable* noname,
@@ -569,6 +573,7 @@ static int ParsePortList(
     /* Get the protocol specific port object */
     if ( rule_proto & (PROTO_BIT__TCP | PROTO_BIT__UDP) )
     {
+    	//通过规则中的端口列表或者端口变量生成PortObject
         portobject = ParsePortListTcpUdpPort(pvt, noname, port_str);
     }
     else /* ICMP, IP  - no real ports just Type and Protocol */
@@ -610,6 +615,7 @@ static int ParsePortList(
     /*
     * set to the port object for this rules src/dst port,
     * these are used during rtn/otn port verification of the rule.
+    * 将生产的PortObject 复制到rtn的src 和dst PortObject 中，他们将在规则的rtn / otn端口验证期间使用。
     */
 
     if (dst_flag)
